@@ -32,6 +32,10 @@
 --color-text: #dbeafe;
 --color-light: #ffffff;
 --color-accent: #fde68a; 
+
+ /* Colores ultimos */
+--marca-color: #3b82f6; /* azul */
+}
   
   /* Dorado */
   --gold-text: linear-gradient(135deg, #f6d365, #fda085, #d4af37, #fff1a8);
@@ -1007,21 +1011,7 @@ border-bottom: 7px solid transparent;
   box-shadow: 0 0 18px rgba(212,175,55,.5);
 }
 
-/* Marca principal */
-.digital-invita {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-decoration: none;
 
-  background: linear-gradient(
-    90deg,
-    #4a0f1c,
-    #7b1e3a,
-    #b94b6a,
-    #7b1e3a,
-    #4a0f1c
-  );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1033,11 +1023,7 @@ border-bottom: 7px solid transparent;
   transform: translateY(-2px);
   filter: drop-shadow(0 0 6px rgba(212,175,55,.5));
 }
-/* Pregunta */
-.marca-pregunta {
-  margin-top: 14px;
-  font-size: 14px;
-}
+
 
 /* Botón CTA */
 .marca-cta {
@@ -1089,24 +1075,18 @@ border-bottom: 7px solid transparent;
   opacity: .85;
 }
 
-/* Marca principal */
-.digital-invita {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-decoration: none;
-  color: #7b1e3a;
-  transition: .3s ease;
-}
 
-.digital-invita:hover {
-  transform: translateY(-2px);
-}
 
 /* Pregunta */
 .marca-pregunta {
-  font-size: .78rem;
-  opacity: .8;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+
+  color: var(--marca-color, #9ca3af);
+
+  transition: .3s ease;
 }
 
 
@@ -1263,19 +1243,46 @@ border-bottom: 7px solid transparent;
 
 /* Latido elegante para Digital Invita */
 @keyframes elegantPulse {
-  0%   { transform: scale(1);   opacity: 1; }
-  50%  { transform: scale(1.04); opacity: 0.92; }
-  100% { transform: scale(1);   opacity: 1; }
+  0%   { transform: scale(1);    opacity: 1; }
+  50%  { transform: scale(1.02); opacity: 0.96; }
+  100% { transform: scale(1);    opacity: 1; }
 }
 
 .digital-invita {
   display: inline-block;
-  animation: elegantPulse 2.8s ease-in-out infinite;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+
+  /* DEGRADADO */
+background: linear-gradient(
+  90deg,
+  #0a1f44,
+  #2f5fa5,
+  #cfd8e3,
+  #2f5fa5,
+  #0a1f44
+);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* BRILLO */
   text-shadow: 
     0 0 6px rgba(212, 175, 55, 0.4),
     0 0 12px rgba(212, 175, 55, 0.25);
+
+  /* ANIMACIÓN */
+  animation: elegantPulse 2.8s ease-in-out infinite;
+
+  transition: .3s ease;
 }
 
+.digital-invita:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 6px rgba(212,175,55,.5));
+}
+  
 /* ===== BOTÓN SELLO CERA REAL ===== */
 .wax-btn {
   position: relative;
